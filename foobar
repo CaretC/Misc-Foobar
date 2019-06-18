@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+LENGTH_OF_LIST=100
+
+for((i = 1; i <= $LENGTH_OF_LIST; i++)); do   
+  if [[ $(($i %5)) == 0 ]] && [[ $(($i %3)) == 0 ]]; then
+    echo "FOOBAR"
+  elif [[ $(($i %5)) == 0 ]]; then
+    echo "BAR"
+  elif [[ $(($i %3)) == 0 ]]; then
+    echo "FOO"
+  else
+    echo $i
+  fi
+done
